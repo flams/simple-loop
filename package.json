@@ -1,0 +1,27 @@
+{
+ "name": "simple-loop",
+ "description": "this a simple loop for iterating over an array or an object",
+ "version": "0.0.1",
+ "homepage": "https://github.com/cosmosio/simple-loop",
+ "licenses": [{
+  "type":"MIT",
+  "url":"https://raw.github.com/cosmosio/simple-loop/master/LICENSE"
+ }],
+ "files": [
+ 	"LICENSE",
+ 	"index.js"
+ ],
+ "author": "Olivier Scherrer <pode.fr@gmail.com>",
+ "keywords": ["loop", "iterate", "object", "array"],
+ "repository": {
+  "type": "git",
+  "url": "git@github.com:cosmosio/simple-loop.git"
+ },
+ "bugs": {
+  "url": "https://github.com/cosmosio/simple-loop/issues"
+ },
+ "scripts": {
+    "test": "mocha"
+ },
+ "main":"index.js"
+}
