@@ -5,6 +5,8 @@
 *
 * Copyright (c) 2014 Olivier Scherrer <pode.fr@gmail.com>
 */
+"use strict";
+
 var assert = require("assert");
 
 /**
@@ -22,7 +24,7 @@ module.exports = function loop(iterated, callback, scope) {
   if (Array.isArray(iterated)) {
       iterated.forEach(callback, scope);
   } else {
-      for (i in iterated) {
+      for (var i in iterated) {
           if (iterated.hasOwnProperty(i)) {
               callback.call(scope, iterated[i], i, iterated);
           }
