@@ -22,7 +22,9 @@ module.exports = function loop(iterated, callback, scope) {
   assert(typeof callback == "function", "simple-loop: callback must be a function");
 
   if (Array.isArray(iterated)) {
-      iterated.forEach(callback, scope);
+      for (var i=0; i<iterated.length; i++) {
+          callback.call(scope, iterated[i], i, iterated);
+      }
   } else {
       for (var i in iterated) {
           if (iterated.hasOwnProperty(i)) {

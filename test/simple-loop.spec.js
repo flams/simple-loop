@@ -57,6 +57,21 @@ describe("Loop", function () {
 		expect(spy.mostRecentCall.object).toBe(thisObj);
 	});
 
+	it("should iterate through all elements when the length varies", function () {
+		var array = [0],
+			callCount = 0;
+
+		sut(array, function () {
+			if (callCount < 10) {
+				array.push(0);
+				callCount++;
+			}
+		});
+
+		expect(callCount).toBe(10);
+		expect(array.length).toBe(11);
+	});
+
 	it("should iterate through objects", function () {
 		var spy = jasmine.createSpy();
 		sut(object, spy);
