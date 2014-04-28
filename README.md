@@ -4,6 +4,7 @@ Simple loop
 Simple loop is an abstraction for iterating over arrays and objects the same way.
 If an array is given, it will loop over it from the first item to the last one.
 If an object is given, then the order will be the same as if `for ... in` were used.
+Simple loop also loops through an array which length changes while looping.
 
 Installation
 ============
