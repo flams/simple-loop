@@ -53,6 +53,13 @@ loop(anObject, function (value, key, iteratedObject) {
 }, scope /* optional object */);
 ```
 
+CHANGELOG
+=========
+
+#### 0.0.4 - 7 MAY 2015
+
+* Remove dependency on assert and use custom assert function instead. Saves 17kb in the end after browserification. Thanks to @tomekwi.
+
 LICENSE
 =======
 

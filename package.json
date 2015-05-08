@@ -1,7 +1,7 @@
 {
   "name": "simple-loop",
   "description": "this a simple loop for iterating over an array or an object",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/flams/simple-loop",
   "licenses": [
     {
