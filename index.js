@@ -7,8 +7,6 @@
 */
 "use strict";
 
-var assert = require("assert");
-
 /**
  * Small abstraction for looping over objects and arrays
  * Warning: it's not meant to be used with nodeList
@@ -18,8 +16,12 @@ var assert = require("assert");
  * @param {Object} scope the scope in which to execute the callback
  */
 module.exports = function loop(iterated, callback, scope) {
-  assert(typeof iterated == "object", "simple-loop: iterated must be an array/object");
-  assert(typeof callback == "function", "simple-loop: callback must be a function");
+  if (typeof iterated != "object") throw new TypeError("simple-loop: " +
+    "iterated must be an array/object"
+  );
+  if (typeof callback != "function") throw new TypeError("simple-loop: " +
+    "callback must be a function"
+  );
 
   if (Array.isArray(iterated)) {
       for (var i=0; i<iterated.length; i++) {
